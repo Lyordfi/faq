@@ -1,9 +1,8 @@
 import React, {Component} from 'react'
 
-
 class quest extends Component {
     state = {
-        id:null
+        id: null
     }
     componentDidMount(){
         let id = this.props.match.params.kerdes_id;
@@ -12,13 +11,13 @@ class quest extends Component {
            
         })
     }
-    render() {
-    return(
-    <div className="container">
-    
-        <h4>{this.state.id}</h4>
-    </div>
-    )}
+      render() {
+        return(
+         <div className="container">
+          <h4>{this.state.id}</h4>
+        </div>
+        )
+    }
 }
 
 export default quest

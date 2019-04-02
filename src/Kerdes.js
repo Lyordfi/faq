@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
+
 const Kerdes = ({kerdes , deleteKerdes}) => {
 
 
@@ -8,11 +9,15 @@ const Kerdes = ({kerdes , deleteKerdes}) => {
       
     return (
       <div className="collection-itom" key={kerdes.id}>
-        <Link to ={'/'+ kerdes.id}>
-          <span>Kérdés:<br/>{ kerdes.kerdes }</span><br/>
-        </Link><span>Válaszok száma: { kerdes.valaszok_szama }</span><br/>
+       <span>Kérdés:<br/></span>
+        <Link to={'/' + kerdes.id} >
+          <input type="text" defaultValue={ kerdes.kerdes }/><br/>
+        </Link>
+        <button type = "submit">Kérdés módosítása</button><br></br>
         <button onClick={()=> {deleteKerdes(kerdes.id)}}>Törlés</button>  <br />
-      
+        <span>Válaszok száma: { kerdes.valaszok_szama }</span><br/>
+          
+         
       </div>
     )    
   });
